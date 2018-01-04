@@ -4,25 +4,43 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.driescarmen.blackbox.MainActivity">
+    tools:context="com.example.driescarmen.blackbox.MainActivity"
+    android:orientation="vertical">
 
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Send"
-        android:onClick="Send"
-        />
+
 
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/TVtekst"
-        app:layout_constraintVertical_weight="1"/>
+        android:layout_height="wrap_content"
+        android:id="@+id/TVtekst"/>
+<android.support.v7.widget.LinearLayoutCompat
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
     <EditText
+        android:id="@+id/ETGroup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/ETtekst"/>
+        android:text="group"
+        android:layout_weight="1"
+        />
+    <EditText
+    android:id="@+id/ETmessage"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="message"
+    android:layout_weight="1"
+    />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send"
+        android:id="@+id/btnSend"
+        />
+
+</android.support.v7.widget.LinearLayoutCompat>
+
 
 </LinearLayout>

@@ -4,6 +4,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -14,10 +16,16 @@ import com.google.firebase.database.ValueEventListener;
 
 public class MainActivity extends AppCompatActivity {
 
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference myRef = database.getReference("message");
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
 
         // Read from the database
         myRef.addValueEventListener(new ValueEventListener() {
@@ -39,20 +47,37 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button send = (Button) findViewById(R.id.btnSend);
+        send.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Readgroupinfo(v);
+                Send(v,Readgroupinfo(v), Readmessageinfo(v));
+            }
+        });
 
     }
     int num = 0;
-    FirebaseDatabase database = FirebaseDatabase.getInstance();
-    DatabaseReference myRef = database.getReference("message");
 
-    public void Send(View v)
+
+
+
+
+    public void Send(View v , String group , String message)
     {
+        myRef = database.getReference(group.);
         // Write a message to the database
 
-
-        myRef.setValue("Hello, World!");
+        myRef.setValue(message);
         num++;
     }
 
-    
+    private String Readgroupinfo(View v){
+        EditText ET = (EditText) findViewById(R.id.ETGroup);
+        return ET.getText().toString();
+    }
+    private String Readmessageinfo(View v){
+        EditText ET = (EditText) findViewById(R.id.ETmessage);
+        return ET.getText().toString();
+    }
+
 }
