@@ -6,7 +6,8 @@ package com.example.driescarmen.blackbox;
 
 public class User {
 
-
+    private String Name;
+    
 
 
 }
