@@ -6,19 +6,29 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Create question"
+        android:text="Group info"
         android:textSize="40dp"/>
 
-    <EditText
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="your question"
-        android:id="@+id/etMakeQuestion"/>
+        android:text="Participants"
+        android:id="@+id/tvParticipants"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Questions"
+        android:id="@+id/tvQuestions"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Create"
-        android:id="@+id/btnCreateQuestion"/>
+        android:text="ready"
+        android:id="@+id/btnReady"/>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Please wait for host to start"
+        />
 </LinearLayout>
