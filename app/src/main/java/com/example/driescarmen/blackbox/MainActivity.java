@@ -1,8 +1,8 @@
 package com.example.driescarmen.blackbox;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -26,58 +26,19 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-
-        // Read from the database
-        myRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                // This method is called once with the initial value and again
-                // whenever data at this location is updated.
-                String value = dataSnapshot.getValue(String.class);
-                //Log.d(TAG, "Value is: " + value);
-                TextView TV = (TextView) findViewById(R.id.TVtekst);
-                TV.setText(value);
-
-            }
-
-            @Override
-            public void onCancelled(DatabaseError error) {
-                // Failed to read value
-                // Log.w(TAG, "Failed to read value.", error.toException());
-            }
-        });
-
-        Button send = (Button) findViewById(R.id.btnSend);
-        send.setOnClickListener(new View.OnClickListener() {
+        Button button =  (Button) findViewById(R.id.btnStart);
+        button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Readgroupinfo(v);
-                Send(v,Readgroupinfo(v), Readmessageinfo(v));
+                GoToMakeGroup(v);
             }
         });
-
-    }
-    int num = 0;
-
-
-
-
-
-    public void Send(View v , String group , String message)
-    {
-        myRef = database.getReference(group.);
-        // Write a message to the database
-
-        myRef.setValue(message);
-        num++;
     }
 
-    private String Readgroupinfo(View v){
-        EditText ET = (EditText) findViewById(R.id.ETGroup);
-        return ET.getText().toString();
-    }
-    private String Readmessageinfo(View v){
-        EditText ET = (EditText) findViewById(R.id.ETmessage);
-        return ET.getText().toString();
+
+    private void GoToMakeGroup(View v){
+        Intent i = new Intent(MainActivity.this, Home.class);
+        startActivity(i);
+
     }
 
 }
