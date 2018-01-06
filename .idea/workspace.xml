@@ -10,7 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="35cad2dd-541e-46b1-b0a6-1ddd60417a73" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/joingroup.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/createquestion.xml" />
     </list>
     <ignored path="BlackBox.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -95,11 +95,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="joingroup.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="joingroup.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/joingroup.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="405">
               <caret line="27" column="15" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="createquestion.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/createquestion.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -2066,6 +2079,7 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/homelayout.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/makegroup.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/joingroup.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/createquestion.xml" />
       </list>
     </option>
   </component>
@@ -2714,6 +2728,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="27" column="15" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/createquestion.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
           <folding />
         </state>
       </provider>
