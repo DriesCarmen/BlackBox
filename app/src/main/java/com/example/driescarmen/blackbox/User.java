@@ -9,67 +9,52 @@ import android.renderscript.Int2;
 
 public class User {
 
-    String Name;
-    String Group;
-    Boolean ReadyToStart;
-    String Question;
-    Boolean Done;
-    int ID;
+    String name;
+    String group;
+    Boolean readyToStart;
+    String question;
+    Boolean done;
+
+
+    public User(String name, String group, Boolean readyToStart, Boolean done) {
+        this.name = name;
+        this.group = group;
+        this.readyToStart = readyToStart;
+        this.done = done;
+    }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
-    public void setName(String name) {
-        Name = name;
-    }
 
     public String getGroup() {
-        return Group;
+        return group;
     }
 
-    public void setGroup(String group) {
-        Group = group;
-    }
 
     public Boolean getReadyToStart() {
-        return ReadyToStart;
+        return readyToStart;
     }
 
     public void setReadyToStart(Boolean readyToStart) {
-        ReadyToStart = readyToStart;
+        this.readyToStart = readyToStart;
     }
 
     public String getQuestion() {
-        return Question;
+        return question;
     }
 
     public void setQuestion(String question) {
-        Question = question;
+        this.question = question;
     }
 
     public Boolean getDone() {
-        return Done;
+        return done;
     }
 
     public void setDone(Boolean done) {
-        Done = done;
-    }
-
-    public int getID() {
-        return ID;
-    }
-
-    public void setID(int ID) {
-        this.ID = ID;
-    }
-
-    public User(String name, String group, Boolean readyToStart, Boolean done, int ID) {
-        Name = name;
-        Group = group;
-        ReadyToStart = readyToStart;
-        Done = done;
-        this.ID = ID;
+        this.done = done;
     }
 }
 

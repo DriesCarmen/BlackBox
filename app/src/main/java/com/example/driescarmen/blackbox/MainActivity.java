@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void GoToJoinMake(View v){
-        Intent i = new Intent(MainActivity.this, MakeGroupActivity.class);
+        Intent i = new Intent(MainActivity.this, Home.class);
         startActivity(i);
 
     }
