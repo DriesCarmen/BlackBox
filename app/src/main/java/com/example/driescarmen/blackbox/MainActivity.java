@@ -20,14 +20,14 @@ public class MainActivity extends AppCompatActivity {
         Button button =  (Button) findViewById(R.id.btnStart);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                GoToMakeGroup(v);
+                GoToJoinMake(v);
             }
         });
     }
 
 
-    private void GoToMakeGroup(View v){
-        Intent i = new Intent(MainActivity.this, Home.class);
+    private void GoToJoinMake(View v){
+        Intent i = new Intent(MainActivity.this, MakeGroupActivity.class);
         startActivity(i);
 
     }

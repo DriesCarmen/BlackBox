@@ -18,19 +18,40 @@ public class MakeGroupActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_make_group);
+
+
+/*
+        Button button =  (Button) findViewById(R.id.btnCreateGroup);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+            send(v,MakeUser());
+            }
+        });
+*/
+
     }
 
 
-    EditText etGroupname = (EditText) findViewById(R.id.etGroupName);
-    EditText etYourName = (EditText) findViewById(R.id.etYourName);
-    Button btnCreateGroup = (Button) findViewById(R.id.btnCreateGroup);
+   // EditText etGroupname = (EditText) findViewById(R.id.etGroupName);
+   // EditText etYourName = (EditText) findViewById(R.id.etYourName);
 
-
-    private void send(View v, String Group, String Name){
+/*
+    private void send(View v, User user){
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference(Group);
+        DatabaseReference myRef = database.getReference(user.getGroup().toString());
 
-        myRef.setValue(Name);
+        myRef.setValue(user);
     }
+
+
+
+    private User MakeUser(){
+
+
+        User user = new User(etYourName.getText().toString(),etGroupname.getText().toString(),false,false,1);
+
+        return user;
+    }
+*/
 
 }
