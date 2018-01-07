@@ -70,7 +70,7 @@ public class MakeGroupActivity extends AppCompatActivity {
 
     private void send(View v, User user){
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference(user.getGroup().toString());
+        DatabaseReference myRef = database.getReference(user.getGroup().toString()).child(user.getName());
 
         myRef.push().setValue(user);
     }

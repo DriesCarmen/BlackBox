@@ -9,11 +9,12 @@
         android:text="Join group"
         android:textSize="40dp"/>
 
-    <EditText
+    <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="group name"
-        android:id="@+id/etGroupNameJoin"/>
+        android:id="@+id/spinnerGroups"></Spinner>
+
+
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -24,5 +25,10 @@
         android:layout_height="wrap_content"
         android:text="Join"
         android:id="@+id/btnJoinGroup"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvTest"
+        android:text="test"/>
 
 </LinearLayout>

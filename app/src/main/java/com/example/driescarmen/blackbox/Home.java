@@ -24,6 +24,14 @@ public class Home extends AppCompatActivity {
                 GoToMakeGroup(v);
             }
         });
+
+        Button buttonjoin =  (Button) findViewById(R.id.btnGoToJoinGroup);
+        buttonjoin.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                GoToJoinGroup(v);
+            }
+        });
+
     }
 
     private void GoToMakeGroup(View v){
@@ -31,5 +39,12 @@ public class Home extends AppCompatActivity {
         startActivity(i);
 
     }
+
+    private void GoToJoinGroup(View v){
+        Intent i = new Intent(this, JoinGroup.class);
+        startActivity(i);
+
+    }
+
 
 }

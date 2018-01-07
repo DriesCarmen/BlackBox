@@ -21,7 +21,8 @@
             android:label="@string/title_activity_home"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".MakeGroupActivity" />
-        <activity android:name=".CreateQuestion"></activity>
+        <activity android:name=".CreateQuestion" />
+        <activity android:name=".JoinGroup"></activity>
     </application>
 
 </manifest>
