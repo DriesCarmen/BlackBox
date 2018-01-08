@@ -16,12 +16,14 @@ public class User {
     Boolean done;
 
 
-    public User(String name, String group, Boolean readyToStart, Boolean done) {
+    public User(){}
+
+    public User(String name, String group) {
         this.name = name;
         this.group = group;
-        this.readyToStart = readyToStart;
-        this.done = done;
     }
+
+
 
     public String getName() {
         return name;

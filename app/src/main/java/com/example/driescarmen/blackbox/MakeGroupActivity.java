@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -39,7 +40,7 @@ public class MakeGroupActivity extends AppCompatActivity {
                 String group = etGroupname.getText().toString();
 
 
-                User user = new User(name,group,false,false);
+                User user = new User(name,group);
 
 
                 if(group == " ")
@@ -56,7 +57,7 @@ public class MakeGroupActivity extends AppCompatActivity {
                 else
                 {
                     send(v,user);
-                    GoToMakeQuestion(v);
+                    GoToMakeQuestion(v, user);
                 }
 
             }
@@ -70,15 +71,20 @@ public class MakeGroupActivity extends AppCompatActivity {
 
     private void send(View v, User user){
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference(user.getGroup().toString()).child(user.getName());
+        DatabaseReference myRef = database.getReference("test");
+
+        System.out.println(user);
+        Log.d("test",user.getName());
 
         myRef.push().setValue(user);
     }
 
 
 
-    private void GoToMakeQuestion(View v){
+    private void GoToMakeQuestion(View v, User user){
         Intent i = new Intent(this, CreateQuestion.class);
+        //i.putExtra("groupame", user.getGroup());
+        //i.putExtra("username", user.getName());
         startActivity(i);
 
     }
