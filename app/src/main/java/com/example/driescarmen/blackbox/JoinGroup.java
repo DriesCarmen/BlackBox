@@ -19,12 +19,16 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 
 public class JoinGroup extends AppCompatActivity {
 
     Spinner spinner;
+
+    Object data;
+    User user;
 
     List<String> list = new ArrayList<String>();
     FirebaseDatabase database = FirebaseDatabase.getInstance();
@@ -39,17 +43,27 @@ public class JoinGroup extends AppCompatActivity {
 
 
 
+
         myRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 // This method is called once with the initial value and again
                 // whenever data at this location is updated.
-               User u = dataSnapshot.getValue(User.class);
-                String groupName = u.getGroup();
+
+                DataSnapshot snapshot = dataSnapshot;
+                snapshot.getValue(User.class);
+                String user2 = snapshot.getValue(User.class).getGroup();
+                // String groupName = user.getGroup();
                 //addItemsOnSpinner(groupName);
 
-                TextView et = (TextView) findViewById(R.id.tvTest);
-                et.setText(groupName);
+                //Log.v("E_val","datasnapshot: " + data);
+               // Log.v("E_val","list of vals: " + s);
+                Log.v("E_val","user " + user2);
+
+
+                //set in button
+               // TextView et = (TextView) findViewById(R.id.tvTest);
+                //et.setText(groupName);
 
 
 

@@ -71,20 +71,20 @@ public class MakeGroupActivity extends AppCompatActivity {
 
     private void send(View v, User user){
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("test");
+        DatabaseReference myRef = database.getReference();
 
         System.out.println(user);
         Log.d("test",user.getName());
 
-        myRef.push().setValue(user);
+        myRef.child(user.getGroup()).child(user.getName()).setValue(user);
     }
 
 
 
     private void GoToMakeQuestion(View v, User user){
         Intent i = new Intent(this, CreateQuestion.class);
-        //i.putExtra("groupame", user.getGroup());
-        //i.putExtra("username", user.getName());
+        i.putExtra("groupname", user.getGroup());
+        i.putExtra("username", user.getName());
         startActivity(i);
 
     }
